@@ -1,0 +1,286 @@
+{
+  "training": {
+    "id": "train-00000",
+    "family": 0,
+    "state": "Booking description for Split. [C1] Contact the booking office to learn which cancellation rules apply. [C2] Swimming facilities are not described in this listing. [C3] Hiking trips can be purchased separately; none are included. [C4] Please contact the property for reception hours. Read these terms before payment. Booking reference TRAIN-00000. 10 nights in a courtyard room. Total price EUR 1720 per person.",
+    "questions": [
+      {
+        "id": "refund",
+        "question": "Can this traveller receive a full cash refund if cancelling before the stated deadline?",
+        "candidates": [
+          "The document explicitly satisfies the requirement.",
+          "The document explicitly contradicts the requirement.",
+          "The document does not establish whether the requirement is satisfied."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 2,
+        "evidence": "C1"
+      },
+      {
+        "id": "arrival",
+        "question": "Does the property explicitly allow check-in after midnight without prior arrangement?",
+        "candidates": [
+          "The document explicitly satisfies the requirement.",
+          "The document explicitly contradicts the requirement.",
+          "The document does not establish whether the requirement is satisfied."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 2,
+        "evidence": "C4"
+      },
+      {
+        "id": "facility",
+        "question": "Does the accommodation itself have a swimming pool included for guests?",
+        "candidates": [
+          "The document explicitly satisfies the requirement.",
+          "The document explicitly contradicts the requirement.",
+          "The document does not establish whether the requirement is satisfied."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 2,
+        "evidence": "C2"
+      },
+      {
+        "id": "activity",
+        "question": "Is a guided hiking excursion included in this holiday\u2019s price?",
+        "candidates": [
+          "The document explicitly satisfies the requirement.",
+          "The document explicitly contradicts the requirement.",
+          "The document does not establish whether the requirement is satisfied."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 1,
+        "evidence": "C3"
+      }
+    ],
+    "oracle": {
+      "refund": 2,
+      "arrival": 2,
+      "facility": 2,
+      "activity": 1
+    },
+    "source": "independent synthetic latent truth; no human labels"
+  },
+  "held_out": {
+    "id": "test-00000",
+    "family": 3,
+    "state": "Offer details | Vancouver\nWhat your stay includes and how it works:\n[C1] Only a voucher for a future stay is offered for cancelled bookings. [C2] Pool entry is charged separately and is not included in the booking. [C3] A guided hike is available for an additional fee. [C4] Overnight arrivals are accepted automatically through our 24-hour check-in desk.\nPlease retain a copy. Booking reference TEST-00000. 13 nights in a garden room. Total price EUR 434 per person.",
+    "questions": [
+      {
+        "id": "refund",
+        "question": "Can this traveller receive a full cash refund if cancelling before the stated deadline?",
+        "candidates": [
+          "The document explicitly satisfies the requirement.",
+          "The document explicitly contradicts the requirement.",
+          "The document does not establish whether the requirement is satisfied."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 1,
+        "evidence": "C1"
+      },
+      {
+        "id": "arrival",
+        "question": "Does the property explicitly allow check-in after midnight without prior arrangement?",
+        "candidates": [
+          "The document explicitly satisfies the requirement.",
+          "The document explicitly contradicts the requirement.",
+          "The document does not establish whether the requirement is satisfied."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 0,
+        "evidence": "C4"
+      },
+      {
+        "id": "facility",
+        "question": "Does the accommodation itself have a swimming pool included for guests?",
+        "candidates": [
+          "The document explicitly satisfies the requirement.",
+          "The document explicitly contradicts the requirement.",
+          "The document does not establish whether the requirement is satisfied."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 1,
+        "evidence": "C2"
+      },
+      {
+        "id": "activity",
+        "question": "Is a guided hiking excursion included in this holiday\u2019s price?",
+        "candidates": [
+          "The document explicitly satisfies the requirement.",
+          "The document explicitly contradicts the requirement.",
+          "The document does not establish whether the requirement is satisfied."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 1,
+        "evidence": "C3"
+      }
+    ],
+    "oracle": {
+      "refund": 1,
+      "arrival": 0,
+      "facility": 1,
+      "activity": 1
+    },
+    "source": "independent synthetic latent truth; no human labels"
+  },
+  "failure": {
+    "case": {
+      "id": "round1-deeper-fp16-0036",
+      "state": "Comparing the current package details reveals specific constraints. While arrival and registration at 01:30 are available automatically without any earlier contact or request, financial flexibility is limited. Cancelling before the cutoff still retains a mandatory administration charge of 27 euros. Regarding activities, the amount quoted covers accommodation only; taking a hike with a guide requires a separate 38 euro payment. Potential guests should note that a swimming area is mentioned but its location, price and booking access conditions are not stated. This ambiguity contrasts with the clear pricing for guided excursions, where the base fee excludes the guide service entirely. Travelers must budget the extra 38 euros if they wish to hike with a professional, as this is not part of the initial quote. The automatic 01:30 check-in offers convenience, yet the hidden costs regarding the pool and guided hikes require careful pre-trip verification to avoid unexpected expenses upon arrival.",
+      "questions": [
+        {
+          "id": "refund",
+          "question": "Can this traveller receive a full cash refund if cancelling before the stated deadline?",
+          "candidates": [
+            "A full cash refund is available when cancelling before the deadline.",
+            "A full cash refund is not available even when cancelling before the deadline.",
+            "It is not specified whether a full cash refund is available."
+          ],
+          "labels": [
+            "meets",
+            "violates",
+            "insufficient_evidence"
+          ],
+          "gold": 1
+        },
+        {
+          "id": "arrival",
+          "question": "Does the property explicitly allow check-in after midnight without prior arrangement?",
+          "candidates": [
+            "Check-in after midnight is allowed without arranging it beforehand.",
+            "Check-in after midnight is not allowed without arranging it beforehand.",
+            "Whether check-in after midnight is possible is not specified."
+          ],
+          "labels": [
+            "meets",
+            "violates",
+            "insufficient_evidence"
+          ],
+          "gold": 0
+        },
+        {
+          "id": "facility",
+          "question": "Does the accommodation itself have a swimming pool included for guests?",
+          "candidates": [
+            "Guests can use a swimming pool at this property for no extra charge.",
+            "Guests cannot use a swimming pool at this property for no extra charge.",
+            "It is not specified whether guests can use a swimming pool at this property for no extra charge."
+          ],
+          "labels": [
+            "meets",
+            "violates",
+            "insufficient_evidence"
+          ],
+          "gold": 2
+        },
+        {
+          "id": "activity",
+          "question": "Is a guided hiking excursion included in this holiday\u2019s price?",
+          "candidates": [
+            "The price includes a hike led by a guide.",
+            "The price does not include a hike led by a guide.",
+            "It is not specified whether the price includes a hike led by a guide."
+          ],
+          "labels": [
+            "meets",
+            "violates",
+            "insufficient_evidence"
+          ],
+          "gold": 1
+        }
+      ],
+      "provenance": {
+        "family": "ordinary",
+        "focus": "facility",
+        "writer": "qwen3.5-122b-a10b:latest",
+        "not_human_validated": true,
+        "initial_auditor": "gemma4:26b",
+        "resolution": "initial-blind-audit"
+      }
+    },
+    "local": {
+      "field": "arrival",
+      "labels": [
+        "meets",
+        "violates",
+        "insufficient_evidence"
+      ],
+      "gold": 0,
+      "pred": 2,
+      "probabilities": [
+        0.12322998046875,
+        0.06683349609375,
+        0.81005859375
+      ],
+      "soft_gold": null,
+      "score_levels": null,
+      "accepted": false,
+      "review": true
+    },
+    "jev": {
+      "field": "arrival",
+      "labels": [
+        "meets",
+        "violates",
+        "insufficient_evidence"
+      ],
+      "gold": 0,
+      "pred": 0,
+      "probabilities": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "soft_gold": null,
+      "score_levels": null,
+      "accepted": true,
+      "review": false
+    },
+    "scope": "Saved frozen text experiment. Full document was sent to both engines. No fresh inference occurs on this teaching screen."
+  },
+  "hardware": {
+    "chip": "Apple M5 Max",
+    "memory_gib": 128,
+    "macos": "26.5.2",
+    "scope": "Inspected demonstration host, not a minimum specification. Memory requirement has not been established."
+  },
+  "sources": {
+    "data/train.jsonl": "db0eeeff7a1374956a0c1d5c5b5cd2eb6ce1a78b6b60247dac93811a8dbd31c6",
+    "data/test.jsonl": "01299b3af2f4c9697e3d058fac431953a14582b5d9bc842086d7f09b1e194022",
+    "experiments/v2/runs/round1-deeper-fp16/deberta-travel-v2-travel-fresh.jsonl": "0da3b4e4a5e295c053b3bc4c83803cb6e52e91092c79cee9c53643d34888a082",
+    "experiments/v2/runs/round1-deeper-fp16/jev-travel-fresh.jsonl": "036228231038e93834b886ce10bb32a842a36fdc5164978edbb4203a6fd55308",
+    "experiments/v2/final/round1-deeper-fp16/test.jsonl": "c1e833db6c3168195966779705684ad3bfbba0d795acd46229d67a015b7a8167"
+  }
+}

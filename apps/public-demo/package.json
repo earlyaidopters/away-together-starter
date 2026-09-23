@@ -1,0 +1,24 @@
+{
+  "name": "away-together",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc && vite build",
+    "test": "node --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@phosphor-icons/react": "^2.1.10"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "vite": "^6.2.0",
+    "@vitejs/plugin-react": "^4.4.0",
+    "@playwright/test": "^1.55.0"
+  }
+}

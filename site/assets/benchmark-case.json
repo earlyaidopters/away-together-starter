@@ -1,0 +1,115 @@
+{
+  "case": {
+    "id": "round1-deeper-fp16-0036",
+    "state": "Comparing the current package details reveals specific constraints. While arrival and registration at 01:30 are available automatically without any earlier contact or request, financial flexibility is limited. Cancelling before the cutoff still retains a mandatory administration charge of 27 euros. Regarding activities, the amount quoted covers accommodation only; taking a hike with a guide requires a separate 38 euro payment. Potential guests should note that a swimming area is mentioned but its location, price and booking access conditions are not stated. This ambiguity contrasts with the clear pricing for guided excursions, where the base fee excludes the guide service entirely. Travelers must budget the extra 38 euros if they wish to hike with a professional, as this is not part of the initial quote. The automatic 01:30 check-in offers convenience, yet the hidden costs regarding the pool and guided hikes require careful pre-trip verification to avoid unexpected expenses upon arrival.",
+    "questions": [
+      {
+        "id": "refund",
+        "question": "Can this traveller receive a full cash refund if cancelling before the stated deadline?",
+        "candidates": [
+          "A full cash refund is available when cancelling before the deadline.",
+          "A full cash refund is not available even when cancelling before the deadline.",
+          "It is not specified whether a full cash refund is available."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 1
+      },
+      {
+        "id": "arrival",
+        "question": "Does the property explicitly allow check-in after midnight without prior arrangement?",
+        "candidates": [
+          "Check-in after midnight is allowed without arranging it beforehand.",
+          "Check-in after midnight is not allowed without arranging it beforehand.",
+          "Whether check-in after midnight is possible is not specified."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 0
+      },
+      {
+        "id": "facility",
+        "question": "Does the accommodation itself have a swimming pool included for guests?",
+        "candidates": [
+          "Guests can use a swimming pool at this property for no extra charge.",
+          "Guests cannot use a swimming pool at this property for no extra charge.",
+          "It is not specified whether guests can use a swimming pool at this property for no extra charge."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 2
+      },
+      {
+        "id": "activity",
+        "question": "Is a guided hiking excursion included in this holiday\u2019s price?",
+        "candidates": [
+          "The price includes a hike led by a guide.",
+          "The price does not include a hike led by a guide.",
+          "It is not specified whether the price includes a hike led by a guide."
+        ],
+        "labels": [
+          "meets",
+          "violates",
+          "insufficient_evidence"
+        ],
+        "gold": 1
+      }
+    ],
+    "provenance": {
+      "family": "ordinary",
+      "focus": "facility",
+      "writer": "qwen3.5-122b-a10b:latest",
+      "not_human_validated": true,
+      "initial_auditor": "gemma4:26b",
+      "resolution": "initial-blind-audit"
+    }
+  },
+  "local": {
+    "field": "arrival",
+    "labels": [
+      "meets",
+      "violates",
+      "insufficient_evidence"
+    ],
+    "gold": 0,
+    "pred": 2,
+    "probabilities": [
+      0.12322998046875,
+      0.06683349609375,
+      0.81005859375
+    ],
+    "soft_gold": null,
+    "score_levels": null,
+    "accepted": false,
+    "review": true
+  },
+  "jev": {
+    "field": "arrival",
+    "labels": [
+      "meets",
+      "violates",
+      "insufficient_evidence"
+    ],
+    "gold": 0,
+    "pred": 0,
+    "probabilities": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "soft_gold": null,
+    "score_levels": null,
+    "accepted": true,
+    "review": false
+  },
+  "scope": "Saved frozen text experiment. Full document was sent to both engines. No fresh inference occurs on this teaching screen."
+}

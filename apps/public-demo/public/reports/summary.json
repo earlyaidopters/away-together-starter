@@ -1,0 +1,641 @@
+{
+  "run_id": "overnight-20260920",
+  "selected_model": {
+    "selected": "travel-nli",
+    "architecture": "nli",
+    "base": "MoritzLaurer/ModernBERT-base-zeroshot-v2.0",
+    "revision": "d421c4545a438fd006fb43f8b981c5d908faa1e1",
+    "dev": {
+      "macro_f1": 0.9356739400517978,
+      "accuracy": 0.9362499713897705
+    },
+    "temperature": 1.1,
+    "accept_threshold": 0.5700000000000001,
+    "calibration_n": 800,
+    "calibration_metrics": {
+      "macro_f1": 0.8073096779570124,
+      "accuracy": 0.8137500286102295
+    },
+    "head_weight_delta_l2": 0.06409426778554916,
+    "training_seconds": 375.32514095306396,
+    "history": [
+      {
+        "stage": "travel-nli",
+        "epoch": 1,
+        "loss": 0.6750956347212196,
+        "dev": {
+          "macro_f1": 0.8496586516634633,
+          "accuracy": 0.8475000262260437
+        },
+        "elapsed_seconds": 188.79167222976685
+      },
+      {
+        "stage": "travel-nli",
+        "epoch": 2,
+        "loss": 0.24455486982750396,
+        "dev": {
+          "macro_f1": 0.9356739400517978,
+          "accuracy": 0.9362499713897705
+        },
+        "elapsed_seconds": 354.14040088653564
+      }
+    ],
+    "sha256": "570136bd194dd2fa51aa29dca2d86bde0151db0c791e21aad71f7d6f612ed152",
+    "frozen_at_utc": "2026-09-21T03:36:51.841138+00:00",
+    "baseline_dev": {
+      "macro_f1": 0.7537233154276489,
+      "accuracy": 0.7475000023841858
+    }
+  },
+  "lanes": {
+    "travel-test": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 1200,
+      "successful_decisions": 1200,
+      "failed_decisions": 0,
+      "accuracy": 0.665,
+      "macro_f1_by_field": 0.6045846660670685,
+      "all_correct_rate": 0.17333333333333334,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.6383333333333333,
+        0.6916874999999999
+      ],
+      "nll_success_only": 0.8206900435811042,
+      "brier_success_only": 0.48816299741421043,
+      "ece_success_only": 0.1800120087713003,
+      "p50_ms": 102.91293750015029,
+      "p95_ms": 130.6056142498619,
+      "accepted": 365,
+      "false_accepts": 85,
+      "false_accept_rate": 0.2328767123287671,
+      "review_rate": 0.6316666666666667
+    },
+    "travel-challenge": {
+      "status": "completed",
+      "scenarios": 100,
+      "decisions": 400,
+      "successful_decisions": 400,
+      "failed_decisions": 0,
+      "accuracy": 0.815,
+      "macro_f1_by_field": 0.7737830077550902,
+      "all_correct_rate": 0.37,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.7825,
+        0.8475
+      ],
+      "nll_success_only": 0.5353629163289193,
+      "brier_success_only": 0.319314631960893,
+      "ece_success_only": 0.11994870379567141,
+      "p50_ms": 110.94712499993875,
+      "p95_ms": 130.72719345011592,
+      "accepted": 96,
+      "false_accepts": 0,
+      "false_accept_rate": 0.0,
+      "review_rate": 0.53
+    },
+    "typed-independent": {
+      "status": "completed",
+      "scenarios": 400,
+      "decisions": 2000,
+      "successful_decisions": 2000,
+      "failed_decisions": 0,
+      "accuracy": 0.4225,
+      "macro_f1_by_field": 0.24479178641002225,
+      "all_correct_rate": 0.0175,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.3975000000000001,
+        0.4490125
+      ],
+      "nll_success_only": 2.306497611173676,
+      "brier_success_only": 0.8821300781652532,
+      "ece_success_only": 0.33353851732611656,
+      "p50_ms": 347.65866650013777,
+      "p95_ms": 604.6120375003281,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.0,
+      "soft_reference_cross_entropy": 2.49663939158055,
+      "soft_reference_brier": 0.49795896797579553,
+      "score_expected_mae": 0.6793441454938965
+    },
+    "btzsc-independent": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 300,
+      "successful_decisions": 300,
+      "failed_decisions": 0,
+      "accuracy": 0.7966666666666666,
+      "macro_f1_by_field": 0.7707716747190432,
+      "all_correct_rate": 0.7966666666666666,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.7533333333333333,
+        0.8433333333333334
+      ],
+      "nll_success_only": 0.9810425134616577,
+      "brier_success_only": 0.32858203806666914,
+      "ece_success_only": 0.13508442210654426,
+      "p50_ms": 30.188520999899993,
+      "p95_ms": 269.0755419995867,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.0
+    },
+    "jev-head-to-head": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 1200,
+      "successful_decisions": 1200,
+      "failed_decisions": 0,
+      "accuracy": 0.9625,
+      "macro_f1_by_field": 0.9575998251727044,
+      "all_correct_rate": 0.85,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.9516666666666667,
+        0.9725
+      ],
+      "nll_success_only": 0.1301837633114071,
+      "brier_success_only": 0.067558,
+      "ece_success_only": 0.04780833333333333,
+      "p50_ms": 173.7303335003162,
+      "p95_ms": 268.42907499969897,
+      "accepted": 297,
+      "false_accepts": 0,
+      "false_accept_rate": 0.0,
+      "review_rate": 0.3958333333333333
+    },
+    "official-typesafe": {
+      "status": "not reproduced",
+      "reason": "Official charts are available; complete accessible exact cases/harness not verified. Independent typed-decisions is not official."
+    }
+  },
+  "all_models": {
+    "modernbert-nli-baseline-typed-independent": {
+      "status": "completed",
+      "scenarios": 400,
+      "decisions": 2000,
+      "successful_decisions": 2000,
+      "failed_decisions": 0,
+      "accuracy": 0.4175,
+      "macro_f1_by_field": 0.24082368347210617,
+      "all_correct_rate": 0.015,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.39299999999999996,
+        0.444
+      ],
+      "nll_success_only": 2.461779912435494,
+      "brier_success_only": 0.9133360051876657,
+      "ece_success_only": 0.37667546023428444,
+      "p50_ms": 355.1878955001939,
+      "p95_ms": 620.2391916500569,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.0,
+      "soft_reference_cross_entropy": 2.669749115839559,
+      "soft_reference_brier": 0.5338367873767087,
+      "score_expected_mae": 0.7112202394936088
+    },
+    "jev-travel-challenge": {
+      "status": "completed",
+      "scenarios": 100,
+      "decisions": 400,
+      "successful_decisions": 400,
+      "failed_decisions": 0,
+      "accuracy": 0.9675,
+      "macro_f1_by_field": 0.9619529620818281,
+      "all_correct_rate": 0.87,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.95,
+        0.9825
+      ],
+      "nll_success_only": 0.1168534582540736,
+      "brier_success_only": 0.06307775,
+      "ece_success_only": 0.041625000000000016,
+      "p50_ms": 171.33281249971333,
+      "p95_ms": 270.68604999967647,
+      "accepted": 107,
+      "false_accepts": 0,
+      "false_accept_rate": 0.0,
+      "review_rate": 0.3825
+    },
+    "modernbert-nli-baseline-travel-challenge": {
+      "status": "completed",
+      "scenarios": 100,
+      "decisions": 400,
+      "successful_decisions": 400,
+      "failed_decisions": 0,
+      "accuracy": 0.6175,
+      "macro_f1_by_field": 0.5262284539903254,
+      "all_correct_rate": 0.12,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.5725,
+        0.6625
+      ],
+      "nll_success_only": 0.9238660300000506,
+      "brier_success_only": 0.5423089938362167,
+      "ece_success_only": 0.23716561481356618,
+      "p50_ms": 221.54952100004266,
+      "p95_ms": 338.3356933999494,
+      "accepted": 86,
+      "false_accepts": 0,
+      "false_accept_rate": 0.0,
+      "review_rate": 0.5725
+    },
+    "travel-nli-travel-challenge": {
+      "status": "completed",
+      "scenarios": 100,
+      "decisions": 400,
+      "successful_decisions": 400,
+      "failed_decisions": 0,
+      "accuracy": 0.815,
+      "macro_f1_by_field": 0.7737830077550902,
+      "all_correct_rate": 0.37,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.7825,
+        0.8475
+      ],
+      "nll_success_only": 0.5353629163289193,
+      "brier_success_only": 0.319314631960893,
+      "ece_success_only": 0.11994870379567141,
+      "p50_ms": 110.94712499993875,
+      "p95_ms": 130.72719345011592,
+      "accepted": 96,
+      "false_accepts": 0,
+      "false_accept_rate": 0.0,
+      "review_rate": 0.53
+    },
+    "jev-typed-independent": {
+      "status": "completed",
+      "scenarios": 400,
+      "decisions": 2000,
+      "successful_decisions": 2000,
+      "failed_decisions": 0,
+      "accuracy": 0.7375,
+      "macro_f1_by_field": 0.6099060228472472,
+      "all_correct_rate": 0.2575,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.7145,
+        0.76
+      ],
+      "nll_success_only": 0.6568864767854579,
+      "brier_success_only": 0.36821190000000004,
+      "ece_success_only": 0.04863000000000002,
+      "p50_ms": 177.172167000208,
+      "p95_ms": 276.1964547996283,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.0,
+      "soft_reference_cross_entropy": 2.1589278271862358,
+      "soft_reference_brier": 0.1612929580655335,
+      "score_expected_mae": 0.3623142175
+    },
+    "frozen-head-travel-test": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 1200,
+      "successful_decisions": 1200,
+      "failed_decisions": 0,
+      "accuracy": 0.37583333333333335,
+      "macro_f1_by_field": 0.22792019170491595,
+      "all_correct_rate": 0.016666666666666666,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.34833333333333333,
+        0.40166666666666667
+      ],
+      "nll_success_only": 1.097710670251642,
+      "brier_success_only": 0.666058256051283,
+      "ece_success_only": 0.03783657585581146,
+      "p50_ms": 120.21212550007476,
+      "p95_ms": 132.07284439999967,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.5666666666666667
+    },
+    "travel-nli-btzsc-independent": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 300,
+      "successful_decisions": 300,
+      "failed_decisions": 0,
+      "accuracy": 0.7966666666666666,
+      "macro_f1_by_field": 0.7707716747190432,
+      "all_correct_rate": 0.7966666666666666,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.7533333333333333,
+        0.8433333333333334
+      ],
+      "nll_success_only": 0.9810425134616577,
+      "brier_success_only": 0.32858203806666914,
+      "ece_success_only": 0.13508442210654426,
+      "p50_ms": 30.188520999899993,
+      "p95_ms": 269.0755419995867,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.0
+    },
+    "base-trained-typed-independent": {
+      "status": "completed",
+      "scenarios": 400,
+      "decisions": 2000,
+      "successful_decisions": 1975,
+      "failed_decisions": 25,
+      "accuracy": 0.348,
+      "macro_f1_by_field": 0.2236016577670993,
+      "all_correct_rate": 0.0025,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.32600000000000007,
+        0.36849999999999994
+      ],
+      "nll_success_only": 1.2068851480785614,
+      "brier_success_only": 0.6824009101507565,
+      "ece_success_only": 0.09346035843408564,
+      "p50_ms": 360.3238750001765,
+      "p95_ms": 622.7713668999963,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.0,
+      "soft_reference_cross_entropy": 1.233138682382037,
+      "soft_reference_brier": 0.2475372004114027,
+      "score_expected_mae": 0.6954854622091203
+    },
+    "modernbert-nli-baseline-travel-test": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 1200,
+      "successful_decisions": 1200,
+      "failed_decisions": 0,
+      "accuracy": 0.5008333333333334,
+      "macro_f1_by_field": 0.4667338613238725,
+      "all_correct_rate": 0.02,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.4775,
+        0.5233333333333333
+      ],
+      "nll_success_only": 1.0176416951025846,
+      "brier_success_only": 0.6425325260539981,
+      "ece_success_only": 0.3044114394734303,
+      "p50_ms": 135.5201040000793,
+      "p95_ms": 169.10226695024454,
+      "accepted": 184,
+      "false_accepts": 31,
+      "false_accept_rate": 0.16847826086956522,
+      "review_rate": 0.6516666666666666
+    },
+    "base-trained-travel-test": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 1200,
+      "successful_decisions": 1200,
+      "failed_decisions": 0,
+      "accuracy": 0.35,
+      "macro_f1_by_field": 0.19884874138973632,
+      "all_correct_rate": 0.016666666666666666,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.32581249999999995,
+        0.375
+      ],
+      "nll_success_only": 1.404106062833214,
+      "brier_success_only": 0.8190574628672378,
+      "ece_success_only": 0.2729627395917972,
+      "p50_ms": 122.87135399992621,
+      "p95_ms": 139.52628575002564,
+      "accepted": 612,
+      "false_accepts": 369,
+      "false_accept_rate": 0.6029411764705882,
+      "review_rate": 0.24583333333333332
+    },
+    "base-trained-travel-challenge": {
+      "status": "completed",
+      "scenarios": 100,
+      "decisions": 400,
+      "successful_decisions": 400,
+      "failed_decisions": 0,
+      "accuracy": 0.2925,
+      "macro_f1_by_field": 0.18012005487331254,
+      "all_correct_rate": 0.01,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.25,
+        0.3375
+      ],
+      "nll_success_only": 1.2679354806406045,
+      "brier_success_only": 0.7654025037151014,
+      "ece_success_only": 0.225306406840682,
+      "p50_ms": 131.56375049993585,
+      "p95_ms": 154.5697708496391,
+      "accepted": 87,
+      "false_accepts": 57,
+      "false_accept_rate": 0.6551724137931034,
+      "review_rate": 0.5375
+    },
+    "jev-btzsc-independent": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 300,
+      "successful_decisions": 300,
+      "failed_decisions": 0,
+      "accuracy": 0.76,
+      "macro_f1_by_field": 0.7529533665317979,
+      "all_correct_rate": 0.76,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.71,
+        0.8066666666666666
+      ],
+      "nll_success_only": 2.5341136270075775,
+      "brier_success_only": 0.3874423333333334,
+      "ece_success_only": 0.14003333333333323,
+      "p50_ms": 177.71391700011918,
+      "p95_ms": 302.109097250127,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.0
+    },
+    "modernbert-nli-baseline-btzsc-independent": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 300,
+      "successful_decisions": 300,
+      "failed_decisions": 0,
+      "accuracy": 0.7966666666666666,
+      "macro_f1_by_field": 0.7704710494184179,
+      "all_correct_rate": 0.7966666666666666,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.7533333333333333,
+        0.8433333333333334
+      ],
+      "nll_success_only": 1.070508454217193,
+      "brier_success_only": 0.33381970773353603,
+      "ece_success_only": 0.13704363358517488,
+      "p50_ms": 28.280437500143307,
+      "p95_ms": 258.77078574992544,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.0
+    },
+    "travel-nli-travel-test": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 1200,
+      "successful_decisions": 1200,
+      "failed_decisions": 0,
+      "accuracy": 0.665,
+      "macro_f1_by_field": 0.6045846660670685,
+      "all_correct_rate": 0.17333333333333334,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.6383333333333333,
+        0.6916874999999999
+      ],
+      "nll_success_only": 0.8206900435811042,
+      "brier_success_only": 0.48816299741421043,
+      "ece_success_only": 0.1800120087713003,
+      "p50_ms": 102.91293750015029,
+      "p95_ms": 130.6056142498619,
+      "accepted": 365,
+      "false_accepts": 85,
+      "false_accept_rate": 0.2328767123287671,
+      "review_rate": 0.6316666666666667
+    },
+    "jev-travel-test": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 1200,
+      "successful_decisions": 1200,
+      "failed_decisions": 0,
+      "accuracy": 0.9625,
+      "macro_f1_by_field": 0.9575998251727044,
+      "all_correct_rate": 0.85,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.9516666666666667,
+        0.9725
+      ],
+      "nll_success_only": 0.1301837633114071,
+      "brier_success_only": 0.067558,
+      "ece_success_only": 0.04780833333333333,
+      "p50_ms": 173.7303335003162,
+      "p95_ms": 268.42907499969897,
+      "accepted": 297,
+      "false_accepts": 0,
+      "false_accept_rate": 0.0,
+      "review_rate": 0.3958333333333333
+    },
+    "travel-nli-typed-independent": {
+      "status": "completed",
+      "scenarios": 400,
+      "decisions": 2000,
+      "successful_decisions": 2000,
+      "failed_decisions": 0,
+      "accuracy": 0.4225,
+      "macro_f1_by_field": 0.24479178641002225,
+      "all_correct_rate": 0.0175,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.3975000000000001,
+        0.4490125
+      ],
+      "nll_success_only": 2.306497611173676,
+      "brier_success_only": 0.8821300781652532,
+      "ece_success_only": 0.33353851732611656,
+      "p50_ms": 347.65866650013777,
+      "p95_ms": 604.6120375003281,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.0,
+      "soft_reference_cross_entropy": 2.49663939158055,
+      "soft_reference_brier": 0.49795896797579553,
+      "score_expected_mae": 0.6793441454938965
+    },
+    "base-trained-btzsc-independent": {
+      "status": "completed",
+      "scenarios": 300,
+      "decisions": 300,
+      "successful_decisions": 300,
+      "failed_decisions": 0,
+      "accuracy": 0.18666666666666668,
+      "macro_f1_by_field": 0.14385086724461885,
+      "all_correct_rate": 0.18666666666666668,
+      "accuracy_ci95_scenario_bootstrap": [
+        0.14333333333333334,
+        0.23
+      ],
+      "nll_success_only": 2.341546524882023,
+      "brier_success_only": 0.837942633425027,
+      "ece_success_only": 0.034154483849803595,
+      "p50_ms": 37.179291500251566,
+      "p95_ms": 262.48080624991417,
+      "accepted": 0,
+      "false_accepts": 0,
+      "false_accept_rate": null,
+      "review_rate": 0.0
+    }
+  },
+  "truth_boundaries": [
+    "Travel references are synthetic, generated from a small template grammar, not human-reviewed real inventory.",
+    "Each split uses one prose family per class/task; lexical family coverage is narrow. Scenario bootstrap intervals are conditional on this corpus and do not measure template-population uncertainty.",
+    "All scenarios recombine four three-way policy dimensions: at most 81 semantic combinations per split. Counts do not imply 1200 independent real-world situations.",
+    "Independent typed decisions measures agreement with a roughly 4B teacher, not verified truth.",
+    "NLI starting weights were previously trained on a classification mixture including AG News, Banking77 and emotion domains. Public pilot results are not claims of untouched zero-shot task transfer.",
+    "Jev results, where present, are fresh observational API calls against frozen identical candidate-choice inputs. No Jev outputs inform local training or changes. This standardized adapter is not the official native typed harness.",
+    "Local latency includes tokenization and synchronized device inference, excludes loading and visual reveal. Local electricity and hardware are not free.",
+    "The final model is frozen before final test scoring; final errors are not used to tune it."
+  ],
+  "product_gate": {
+    "target_macro_f1": 0.85,
+    "target_false_accept_rate": 0.05,
+    "passed": false,
+    "reason": "Held-out travel macro F1 and false-accept rate both miss preregistered goals; use only as an experimental demo."
+  },
+  "paired_comparisons": {
+    "travel-test": {
+      "matched_scenarios": 300,
+      "local_minus_jev_accuracy": -0.2975,
+      "paired_scenario_bootstrap_ci95": [
+        -0.32585416666666667,
+        -0.2683333333333333
+      ]
+    },
+    "travel-challenge": {
+      "matched_scenarios": 100,
+      "local_minus_jev_accuracy": -0.1525,
+      "paired_scenario_bootstrap_ci95": [
+        -0.1825,
+        -0.1225
+      ]
+    },
+    "typed-independent": {
+      "matched_scenarios": 400,
+      "local_minus_jev_accuracy": -0.315,
+      "paired_scenario_bootstrap_ci95": [
+        -0.34201250000000005,
+        -0.28648750000000006
+      ]
+    },
+    "btzsc-independent": {
+      "matched_scenarios": 300,
+      "local_minus_jev_accuracy": 0.03666666666666667,
+      "paired_scenario_bootstrap_ci95": [
+        -0.013333333333333334,
+        0.08674999999999955
+      ]
+    }
+  },
+  "jev_cost": {
+    "scored_input_tokens": 1119998,
+    "estimated_scored_usd": 0.04703991600000001,
+    "input_usd_per_million": 0.042,
+    "source": "classifier.dev/docs, retrieved 20 September 2026",
+    "billing_invoice": false,
+    "warmups_excluded_from_scored_cost": true,
+    "warmup_input_tokens": 3536,
+    "estimated_total_usd_including_warmups": 0.047188428,
+    "scored_requests": 1100,
+    "total_requests_including_warmups": 1104
+  }
+}

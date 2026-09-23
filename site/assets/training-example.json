@@ -1,0 +1,78 @@
+{
+  "id": "train-00000",
+  "family": 0,
+  "state": "Booking description for Split. [C1] Contact the booking office to learn which cancellation rules apply. [C2] Swimming facilities are not described in this listing. [C3] Hiking trips can be purchased separately; none are included. [C4] Please contact the property for reception hours. Read these terms before payment. Booking reference TRAIN-00000. 10 nights in a courtyard room. Total price EUR 1720 per person.",
+  "questions": [
+    {
+      "id": "refund",
+      "question": "Can this traveller receive a full cash refund if cancelling before the stated deadline?",
+      "candidates": [
+        "The document explicitly satisfies the requirement.",
+        "The document explicitly contradicts the requirement.",
+        "The document does not establish whether the requirement is satisfied."
+      ],
+      "labels": [
+        "meets",
+        "violates",
+        "insufficient_evidence"
+      ],
+      "gold": 2,
+      "evidence": "C1"
+    },
+    {
+      "id": "arrival",
+      "question": "Does the property explicitly allow check-in after midnight without prior arrangement?",
+      "candidates": [
+        "The document explicitly satisfies the requirement.",
+        "The document explicitly contradicts the requirement.",
+        "The document does not establish whether the requirement is satisfied."
+      ],
+      "labels": [
+        "meets",
+        "violates",
+        "insufficient_evidence"
+      ],
+      "gold": 2,
+      "evidence": "C4"
+    },
+    {
+      "id": "facility",
+      "question": "Does the accommodation itself have a swimming pool included for guests?",
+      "candidates": [
+        "The document explicitly satisfies the requirement.",
+        "The document explicitly contradicts the requirement.",
+        "The document does not establish whether the requirement is satisfied."
+      ],
+      "labels": [
+        "meets",
+        "violates",
+        "insufficient_evidence"
+      ],
+      "gold": 2,
+      "evidence": "C2"
+    },
+    {
+      "id": "activity",
+      "question": "Is a guided hiking excursion included in this holiday\u2019s price?",
+      "candidates": [
+        "The document explicitly satisfies the requirement.",
+        "The document explicitly contradicts the requirement.",
+        "The document does not establish whether the requirement is satisfied."
+      ],
+      "labels": [
+        "meets",
+        "violates",
+        "insufficient_evidence"
+      ],
+      "gold": 1,
+      "evidence": "C3"
+    }
+  ],
+  "oracle": {
+    "refund": 2,
+    "arrival": 2,
+    "facility": 2,
+    "activity": 1
+  },
+  "source": "independent synthetic latent truth; no human labels"
+}

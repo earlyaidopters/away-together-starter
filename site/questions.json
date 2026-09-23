@@ -1,0 +1,122 @@
+[
+  {
+    "id": "Q01",
+    "question": "Why use this instead of ChatGPT or Jev?",
+    "answer": "A repeatable decision can become one part of an app: read a policy, pick a label, show a reason. Compare simple rules and an existing model on your own cases first. This project does not prove universal savings or superiority. Its later challenger lost to Jev on the frozen text test."
+  },
+  {
+    "id": "Q02",
+    "question": "What did Mark build, and what came from elsewhere?",
+    "answer": "Mark designed and assembled the travel task, app, data workflow, training experiments, evaluation, image integration and teaching materials. Astra helped with the build. ModernBERT/DeBERTa and the OpenJev/DiffusionGemma image stack are upstream work. The source includes credits and license notices. The prepared specification records intended work, not a one-prompt execution transcript."
+  },
+  {
+    "id": "Q03",
+    "question": "Why use AI for a price check?",
+    "answer": "The budget comparison is ordinary code. The model is tested on varied policy wording. Clear arithmetic and exact rules should stay in code; the application combines their results with model observations."
+  },
+  {
+    "id": "Q04",
+    "question": "Are fixed answers always correct or deterministic?",
+    "answer": "No. Restricting the choices fixes the answer format. It does not establish accuracy or repeatability across every run, model or hardware setting. Probabilities shown by this experiment are not calibrated guarantees."
+  },
+  {
+    "id": "Q05",
+    "question": "Is fine-tuning the same as writing a prompt?",
+    "answer": "A prompt supplies instructions and information for a request. Training changes saved model settings using labeled examples. A normal holiday check uses those saved settings and does not retrain the model."
+  },
+  {
+    "id": "Q06",
+    "question": "Do I have to train before trying the demo?",
+    "answer": "No. Restore the supplied text weights and run the travel example. The image model is also pretrained and downloaded separately. A new subject requires its own labels, configuration and evaluation before you treat it as working."
+  },
+  {
+    "id": "Q07",
+    "question": "Where did the examples come from?",
+    "answer": "The travel scenarios are synthetic. Intended scenario truth and labels were created and audited by the recorded generation workflow. The final V2 references had agent review, 52 document repairs and two writer-assisted adjudications. There was no human validation. The source preserves the audit trail; these results are not real-hotel field accuracy."
+  },
+  {
+    "id": "Q08",
+    "question": "How many examples should I use?",
+    "answer": "No universal number is established. Start with 20 cases you personally understand as a smoke test, not a training minimum or reliability certificate. Include ambiguous and failed cases. Expand the dataset and test coverage for the consequences of your task. Keep related templates, customers and documents in the same split."
+  },
+  {
+    "id": "Q09",
+    "question": "How do I adapt the support example?",
+    "answer": "Use the editor to export real JSONL records with text and your label. Define the task and candidate answers, then convert those records into the trainer\u2019s documented question/candidate format. Reserve a separate test before training. The travel trainer is not automatically configured for billing labels; the companion adaptation guide explains the mapping. The editor itself does not predict or train."
+  },
+  {
+    "id": "Q10",
+    "question": "What did the benchmark compare?",
+    "answer": "The later frozen V2 text challenger and fresh Jev calls received the same 360 synthetic travel scenarios and 1,440 decisions each, without reference labels. V2 scored 95.28% and Jev 98.61%. The predeclared superiority gate failed, so V2 was not promoted or retuned against that exam. This does not measure the complete photo-aware app."
+  },
+  {
+    "id": "Q11",
+    "question": "Why does the live app use V1?",
+    "answer": "The later challenger failed its promotion rule, so the active V1 selection remained unchanged. That is an experimental deployment decision, not proof that V1 is more accurate. V1\u2019s historical 66.5% result came from a different test and is not directly comparable to the V2 chart."
+  },
+  {
+    "id": "Q12",
+    "question": "How do I know a test was fair?",
+    "answer": "Inspect the pinned input and checkpoint hashes, full per-case inputs, outputs, references and failure rows. Separate training/development from the final exam and freeze before scoring. The benchmark-case download contains one actual mistake. Avoid treating a selected demo case as a success rate or private model reasoning as required evidence."
+  },
+  {
+    "id": "Q13",
+    "question": "Does this make pictures or read them?",
+    "answer": "The image branch reads supplied picture pixels. The destination illustrations were generated separately for a fictional demo. Nine illustrations are shared across three destination sets and 40 offers; they are not 40 photographed real hotels. The photo lab also lets you send your own PNG/JPEG to the local image reader."
+  },
+  {
+    "id": "Q14",
+    "question": "Can hosted Jev recognize images?",
+    "answer": "This demonstration establishes only the capability of our local OpenJev-connected image system. It does not establish the hosted Jev product\u2019s current image support. They should not be presented as the same implementation."
+  },
+  {
+    "id": "Q15",
+    "question": "Do my photo files leave my computer?",
+    "answer": "This photo lab sends image bytes to the explainer on localhost:8770, then to the fixed local model endpoint on 127.0.0.1:8081. It does not send the filename, a caption or an expected label, and it does not save the uploaded image. Initial model installation needs internet downloads. Hosted benchmark calls are a separate workflow."
+  },
+  {
+    "id": "Q16",
+    "question": "What can I conclude from a photograph?",
+    "answer": "A visible pool is evidence of a visible pool. It does not establish access, price, opening hours or safety. A missing stairs photograph does not prove there is a step-free route. Read policy promises from text and visible features from images. Conflicts or missing evidence need human review."
+  },
+  {
+    "id": "Q17",
+    "question": "What does a green card mean?",
+    "answer": "The implemented checks passed according to the models and rules. It is not a verified booking recommendation. A failed requirement makes the card decline; missing evidence leads to review unless another requirement already fails. Open the reason drawer. A person must verify unresolved terms or access; the app does not book or approve a transaction."
+  },
+  {
+    "id": "Q18",
+    "question": "Does it replace a general assistant?",
+    "answer": "This is a narrow travel decision system. Writing, broad research and complex open-ended judgment need separate evaluation. You can integrate a checked label into another workflow, but the demo does not include mobile remote control, an always-on helpdesk or autonomous bookings."
+  },
+  {
+    "id": "Q19",
+    "question": "Does it work on Windows, Linux or my phone?",
+    "answer": "The supplied photo launcher is Apple-silicon-specific. The tested computer is an M5 Max with 128 GB memory. Other operating systems and smaller-memory setups have not been validated. A responsive page on a phone does not mean the model runs on that phone. Text-only and image setup are separate."
+  },
+  {
+    "id": "Q20",
+    "question": "What does it cost?",
+    "answer": "Local inference has no model-provider per-check fee. Hardware, power, coding tools, training, setup and maintenance still have costs. Total build cost and a universal LLM price ratio were not measured. Repeating hosted Jev comparisons is separate and may incur provider charges. Existing subscriptions are not assumed to cover unrelated API usage."
+  },
+  {
+    "id": "Q21",
+    "question": "How fast is it?",
+    "answer": "Historical V1 text measurements: 10.13 seconds for the cold first HTTP request and 105.43 ms warm median. A separate photo-aware 40-offer scan took about 40.7 seconds. These are different workloads on this machine, not universal latency claims or a like-for-like speedup ratio. The live demo prints its own fresh request time."
+  },
+  {
+    "id": "Q22",
+    "question": "What happens after sleep or a failure?",
+    "answer": "Local services need the computer awake and the relevant processes running. Check services, restart the unavailable process, and rerun. The demo shows an error instead of substituting a stored successful answer. This kit does not claim unattended recovery or always-on hosting."
+  },
+  {
+    "id": "Q23",
+    "question": "Can I download, modify or sell this?",
+    "answer": "The repository and release are private during preparation. This same repository will become public when the video goes live. Reuse follows the license supplied with each component. No commercial permission should be inferred from being able to view a file. Upstream code, models, datasets and fonts retain their respective terms."
+  },
+  {
+    "id": "Q24",
+    "question": "How do I connect the decision to another app?",
+    "answer": "The live agency exposes a local JSON endpoint, /api/decide. Its reply includes profile status and reasons. A caller can inspect that status and suggest a queue or ask for review. The supplied travel API has fixed travel fields; a support integration needs its own adapter, tests and human approval rules. See the local API example in the companion."
+  }
+]

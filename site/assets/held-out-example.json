@@ -1,0 +1,78 @@
+{
+  "id": "test-00000",
+  "family": 3,
+  "state": "Offer details | Vancouver\nWhat your stay includes and how it works:\n[C1] Only a voucher for a future stay is offered for cancelled bookings. [C2] Pool entry is charged separately and is not included in the booking. [C3] A guided hike is available for an additional fee. [C4] Overnight arrivals are accepted automatically through our 24-hour check-in desk.\nPlease retain a copy. Booking reference TEST-00000. 13 nights in a garden room. Total price EUR 434 per person.",
+  "questions": [
+    {
+      "id": "refund",
+      "question": "Can this traveller receive a full cash refund if cancelling before the stated deadline?",
+      "candidates": [
+        "The document explicitly satisfies the requirement.",
+        "The document explicitly contradicts the requirement.",
+        "The document does not establish whether the requirement is satisfied."
+      ],
+      "labels": [
+        "meets",
+        "violates",
+        "insufficient_evidence"
+      ],
+      "gold": 1,
+      "evidence": "C1"
+    },
+    {
+      "id": "arrival",
+      "question": "Does the property explicitly allow check-in after midnight without prior arrangement?",
+      "candidates": [
+        "The document explicitly satisfies the requirement.",
+        "The document explicitly contradicts the requirement.",
+        "The document does not establish whether the requirement is satisfied."
+      ],
+      "labels": [
+        "meets",
+        "violates",
+        "insufficient_evidence"
+      ],
+      "gold": 0,
+      "evidence": "C4"
+    },
+    {
+      "id": "facility",
+      "question": "Does the accommodation itself have a swimming pool included for guests?",
+      "candidates": [
+        "The document explicitly satisfies the requirement.",
+        "The document explicitly contradicts the requirement.",
+        "The document does not establish whether the requirement is satisfied."
+      ],
+      "labels": [
+        "meets",
+        "violates",
+        "insufficient_evidence"
+      ],
+      "gold": 1,
+      "evidence": "C2"
+    },
+    {
+      "id": "activity",
+      "question": "Is a guided hiking excursion included in this holiday\u2019s price?",
+      "candidates": [
+        "The document explicitly satisfies the requirement.",
+        "The document explicitly contradicts the requirement.",
+        "The document does not establish whether the requirement is satisfied."
+      ],
+      "labels": [
+        "meets",
+        "violates",
+        "insufficient_evidence"
+      ],
+      "gold": 1,
+      "evidence": "C3"
+    }
+  ],
+  "oracle": {
+    "refund": 1,
+    "arrival": 0,
+    "facility": 1,
+    "activity": 1
+  },
+  "source": "independent synthetic latent truth; no human labels"
+}

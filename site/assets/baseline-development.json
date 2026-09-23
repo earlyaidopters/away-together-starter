@@ -1,0 +1,9 @@
+{
+  "source": "models/selection.json",
+  "base": "MoritzLaurer/ModernBERT-base-zeroshot-v2.0",
+  "revision": "d421c4545a438fd006fb43f8b981c5d908faa1e1",
+  "baseline_dev_accuracy": 74.75000023841858,
+  "trained_dev_accuracy": 93.62499713897705,
+  "decisions": 800,
+  "scope": "Historical development measurements, used for model selection; not final performance"
+}

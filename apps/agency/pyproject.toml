@@ -1,0 +1,8 @@
+[project]
+name = "travel-lab"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = ["torch", "transformers>=4.48,<5", "datasets", "scikit-learn", "safetensors", "fastapi", "uvicorn", "matplotlib", "pillow", "pytest", "pyyaml", "httpx", "reportlab"]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
